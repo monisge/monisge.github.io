@@ -542,7 +542,7 @@ button#go-up:hover #percent {
   display: none !important;
 }
 
-
+/* 滚动条样式 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px
@@ -568,24 +568,40 @@ button#go-up:hover #percent {
   background-color: #e58a8a
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.stars_box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.stars_box .card_box {
+  --w: calc(16.67% - 13px);
+  width: var(--w) !important;
+  height: auto !important;
+  margin: 0px !important
+}
+.card_box .card_content{
+  margin-top: 86%;
+}
+@media screen and (max-width: 1100px) {
+  .stars_box .card_box {
+      --w: calc(20% - 12px);
+  }
+}
+@media screen and (max-width: 900px) {
+  .stars_box .card_box {
+      --w: calc(25% - 12px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .stars_box .card_box {
+      --w: calc(33.33% - 10px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .stars_box .card_box {
+      --w: calc(50% - 8px);
+  }
+}
 
 
 
