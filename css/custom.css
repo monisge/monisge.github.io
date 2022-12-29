@@ -58,9 +58,9 @@ i:hover{
 }
 /* 这里的2是代表导航栏的第二个元素，即有子菜单的元素，可以按自己需求修改 */
 .menus_items .menus_item:nth-child(2) .menus_item_child {
-  left: -125px;
+  left: -85px;
 }
-/* .menus_items .menus_item:nth-child(3) .menus_item_child {
+.menus_items .menus_item:nth-child(3) .menus_item_child {
   left: -85px;
 }
 .menus_items .menus_item:nth-child(4) .menus_item_child {
@@ -74,7 +74,7 @@ i:hover{
 }
 .menus_items .menus_item:nth-child(7) .menus_item_child {
   left: -88px;
-} */
+} 
 
 
 /* 主页分类圆角 */
@@ -603,6 +603,77 @@ button#go-up:hover #percent {
   }
 }
 
+/* 微信公众号 */
+#aside-content .card-widget#card-wechat {
+  background: #57bd6a;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  height: 110px;
+}
+
+#aside-content .card-widget#card-wechat img {
+  max-height: 110px;
+  object-fit: cover;
+}
+
+.friend-link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* 微信公众号翻转 */
+
+#flip-wrapper {
+  position: relative;
+  width: 235px;
+  height: 110px;
+  z-index: 1;
+}
+
+/* this need to be here - i dont know why?*/
+#flip-wrapper {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+#flip-content {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+}
+
+#flip-wrapper:hover #flip-content {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* background-color: #e71840; */
+  background: url(https://img.zhheo.com/i/2022/08/31/630efc6e3e794.png) center center no-repeat;
+  background-size: 100%;
+}
+
+.back.face {
+  display: block;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  /* background-color: #212121; */
+  background: url(https://img.zhheo.com/i/2022/08/31/630efca2abb02.png) center center no-repeat;
+  background-size: 100%;
+}
 
 
 
